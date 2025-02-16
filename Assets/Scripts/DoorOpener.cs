@@ -5,23 +5,24 @@ using UnityEngine;
 public class DoorOpener : MonoBehaviour
 {
     Animator animator;
+
+    GameManager gameManager;
+
     public int id = 0;
     bool isOpen = false;
 
     private void Start() {
         animator = GetComponent<Animator>();
-    }
-
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.E)) {
-            OpenDoor();
-        }
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     public void OpenDoor() {
-        if (isOpen == false) {
-            animator.SetTrigger("isOpen");
-            isOpen = true;
+        //check with gamemanager
+        if (gameManager.hasKeyCard(id)) {
+            if (isOpen == false) {
+                animator.SetTrigger("isOpen");
+                isOpen = true;
+            }
         }
     }
 }

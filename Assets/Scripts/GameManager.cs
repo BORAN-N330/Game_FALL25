@@ -15,4 +15,17 @@ public class GameManager : MonoBehaviour
         Debug.Log(ids[0]);
         Debug.Log(cards[0]);
     }
+
+    public bool hasKeyCard(int id) {
+        bool output = false;
+
+        //check if the player has an id
+        foreach (int card in ids) {
+            if (card == id) {
+                output = true;
+            }
+        }
+
+        return output;
+    }
 }
