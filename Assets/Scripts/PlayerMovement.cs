@@ -38,7 +38,10 @@ public class PlayerMovement : MonoBehaviour
         } else {
             rb.linearDamping = 0;
         }
+    }
 
+    private void FixedUpdate() {
+        //fixed for physics
         MovePlayer();
     }
 
@@ -50,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer() {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        rb.AddForce(moveDirection.normalized * moveSpeed * Time.deltaTime, ForceMode.Force);
+        //no delta time with fixed update
+        rb.AddForce(moveDirection.normalized * moveSpeed, ForceMode.Force);
     }
 }
