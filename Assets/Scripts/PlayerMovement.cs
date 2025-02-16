@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
+    public float shiftSpeed = 50f;
 
     //drag
     public float groundDrag;
     public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
+    float shifting = 0f;
 
     public Transform orientation;
     float horizontalInput;
@@ -49,13 +51,19 @@ public class PlayerMovement : MonoBehaviour
     private void KeyboardInput() {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKey(KeyCode.LeftShift)) {
+            shifting = 1;
+        } else {
+            shifting = 0;
+        }
     }
 
     private void MovePlayer() {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         //no delta time with fixed update
-        rb.AddForce(moveDirection.normalized * moveSpeed, ForceMode.Force);
+        rb.AddForce(moveDirection.normalized * (moveSpeed + (shifting * shiftSpeed)), ForceMode.Force);
     }
 
     private void SpeedControl() {

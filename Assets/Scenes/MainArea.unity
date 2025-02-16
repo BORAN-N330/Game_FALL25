@@ -850,6 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 100
+  shiftSpeed: 50
   groundDrag: 7
   playerHeight: 2
   whatIsGround:
