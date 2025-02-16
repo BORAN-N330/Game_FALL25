@@ -1,16 +1,15 @@
+using UnityEditor;
 using UnityEngine;
 
 public class DoorOpener : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Animator animator;
+    bool isOpen = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.E) && isOpen == false) {
+            animator.SetTrigger("isOpen");
+            isOpen = true;
+        }
     }
 }
