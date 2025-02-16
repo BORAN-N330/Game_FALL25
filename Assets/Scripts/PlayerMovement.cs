@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
         KeyboardInput();
+        SpeedControl();
 
         //if drag
         if (grounded) {
@@ -55,5 +56,15 @@ public class PlayerMovement : MonoBehaviour
 
         //no delta time with fixed update
         rb.AddForce(moveDirection.normalized * moveSpeed, ForceMode.Force);
+    }
+
+    private void SpeedControl() {
+        Vector3 flatVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+
+        //limit
+        if(flatVelocity.magnitude > moveSpeed) {
+            Vector3 limitedVelocity = flatVelocity.normalized * moveSpeed;
+            rb.linearVelocity = new Vector3(limitedVelocity.x, rb.linearVelocity.y, limitedVelocity.z);
+        }
     }
 }
