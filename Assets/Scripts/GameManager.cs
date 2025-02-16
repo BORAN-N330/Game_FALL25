@@ -1,16 +1,18 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public List<int> ids;
+    public List<string> cards;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void addKeyCard(int id, string text) {
+        ids.Add(id);
+        cards.Add(text);
+        //show on screen? (id collected)
+
+        Debug.Log(ids[0]);
+        Debug.Log(cards[0]);
     }
 }

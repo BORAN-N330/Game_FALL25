@@ -470,6 +470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 631142145}
+  - component: {fileID: 631142146}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -492,6 +493,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &631142146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631142144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc96e07b78035240a1ad29307f10e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ids: 
 --- !u!1 &679593943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,7 +1629,7 @@ GameObject:
   - component: {fileID: 1303670637}
   m_Layer: 0
   m_Name: CharacterBody
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2237,6 +2251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450651849865135}
   - component: {fileID: 919132147657698583}
+  - component: {fileID: 919132147657698584}
   m_Layer: 0
   m_Name: keyCard
   m_TagString: Untagged
@@ -2258,6 +2273,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardText: A
   cardID: 0
+--- !u!65 &919132147657698584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147657698581}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.8941855, y: 3.3616257, z: 1.514225}
+  m_Center: {x: 0.04786849, y: 0.052719593, z: -0.015655518}
 --- !u!23 &1305037035515130526
 MeshRenderer:
   m_ObjectHideFlags: 0
