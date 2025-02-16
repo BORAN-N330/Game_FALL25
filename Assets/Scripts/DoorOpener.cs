@@ -3,11 +3,21 @@ using UnityEngine;
 
 public class DoorOpener : MonoBehaviour
 {
-    public Animator animator;
+    Animator animator;
     bool isOpen = false;
 
+    private void Start() {
+        animator = GetComponent<Animator>();
+    }
+
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.E) && isOpen == false) {
+        if (Input.GetKeyDown(KeyCode.E)) {
+            OpenDoor();
+        }
+    }
+
+    public void OpenDoor() {
+        if (isOpen == false) {
             animator.SetTrigger("isOpen");
             isOpen = true;
         }
