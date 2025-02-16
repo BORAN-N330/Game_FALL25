@@ -506,6 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ids: 
+  cards: []
 --- !u!1 &679593943
 GameObject:
   m_ObjectHideFlags: 0
