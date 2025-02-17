@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,13 +8,20 @@ public class GameManager : MonoBehaviour
     public List<int> ids;
     public List<string> cards;
 
+    public GameObject cardHolder;
+    GenerateCard generateCard;
+
+    void Start()
+    {
+        generateCard = cardHolder.GetComponent<GenerateCard>();
+    }
+
     public void addKeyCard(int id, string text) {
         ids.Add(id);
         cards.Add(text);
-        //show on screen? (id collected)
 
-        Debug.Log(ids[0]);
-        Debug.Log(cards[0]);
+        //add card to UI
+        generateCard.CreateCard(text);
     }
 
     public bool hasKeyCard(int id) {
