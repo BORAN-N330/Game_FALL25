@@ -986,6 +986,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReach: 3
+--- !u!1 &1118949603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2286019109592388926, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
+  m_PrefabInstance: {fileID: 5390980037141347367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1163076503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1744,6 +1749,34 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5316177959927277839, guid: c5ea18c1d6198a240873a67eaa050598, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316177959927277839, guid: c5ea18c1d6198a240873a67eaa050598, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316177959927277839, guid: c5ea18c1d6198a240873a67eaa050598, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1118949603}
+    - target: {fileID: 5316177959927277839, guid: c5ea18c1d6198a240873a67eaa050598, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316177959927277839, guid: c5ea18c1d6198a240873a67eaa050598, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316177959927277839, guid: c5ea18c1d6198a240873a67eaa050598, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DoorOpener, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316177959927277839, guid: c5ea18c1d6198a240873a67eaa050598, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7412203987745678511, guid: c5ea18c1d6198a240873a67eaa050598, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.0890872
@@ -1806,31 +1839,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9206182799400438945, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.0513797
+      value: 2.51
       objectReference: {fileID: 0}
     - target: {fileID: 9206182799400438945, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.79
+      value: 1.22
       objectReference: {fileID: 0}
     - target: {fileID: 9206182799400438945, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.662228
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: 9206182799400438945, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.71492255
       objectReference: {fileID: 0}
     - target: {fileID: 9206182799400438945, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9206182799400438945, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.6992037
       objectReference: {fileID: 0}
     - target: {fileID: 9206182799400438945, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9206182799400438945, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1838,7 +1871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9206182799400438945, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 88.726
       objectReference: {fileID: 0}
     - target: {fileID: 9206182799400438945, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
