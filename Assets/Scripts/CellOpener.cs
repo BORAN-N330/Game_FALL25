@@ -1,16 +1,28 @@
+using System.Collections;
 using UnityEngine;
 
 public class CellOpener : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    Animator animator;
+
+    //time to wake
+    public float openDelaySeconds = 3f;
+
     void Start()
     {
-        
+        //get animator
+        animator = GetComponent<Animator>();
+
+        //set delay
+        StartCoroutine(WaitTime());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    //delay
+    IEnumerator WaitTime() {
+        yield return new WaitForSeconds(openDelaySeconds);
+
+        //after delay, play animation
+        animator.SetTrigger("isOpening");
     }
 }
