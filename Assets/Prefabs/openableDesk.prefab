@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7031845131186154388}
   m_Layer: 0
   m_Name: desk
-  m_TagString: Untagged
+  m_TagString: Desk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,7 +428,10 @@ MonoBehaviour:
   keyCardInDrawer: {fileID: 2286019109592388926, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
   spawnPoint: {fileID: 2368551621239912939}
   padlock: {fileID: 2462099734076827238}
+  padlockUI: {fileID: 0}
+  code: 000000000000000000000000
   isLocked: 1
+  matchPairCurrent: 0
 --- !u!95 &2210551345625920275
 Animator:
   serializedVersion: 7

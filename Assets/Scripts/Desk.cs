@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -6,18 +8,28 @@ public class Desk : MonoBehaviour
 {
     Animator animator;
 
+    [Header("Keycard")]
     public string keyCardText = "";
     public int keyCardCode = 0;
     public GameObject keyCardInDrawer;
-
     public GameObject spawnPoint;
+
+    [Header("Padlock")]
     public GameObject padlock;
+    public GameObject padlockUI;
+    public int[] code = {0,0,0};
     public bool isLocked = true;
     bool isOpen;
+
+    public static int matchPair = 0;
+    [Header("Magic Stuff (Dont mess with)")]
+    public int matchPairCurrent = 0;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        matchPairCurrent = matchPair;
+        matchPair += 1;
     }
 
     public void ToggleDrawer() {
@@ -31,13 +43,25 @@ public class Desk : MonoBehaviour
             }
         } else {
             //show LOCK UI
-            RemoveLock();
+            GameObject canvas = GameObject.Find("Canvas");
+            
+            //add a new UI
+            GameObject tempPadlockUI = Instantiate(padlock);
+            tempPadlockUI.GetComponent<PadlockUI>().code = code;
+            tempPadlockUI.GetComponent<PadlockUI>().matchPair = matchPair;
+            tempPadlockUI.transform.SetParent(canvas.transform);
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            //RemoveLock() --> in update;
         }
     }
 
-    private void RemoveLock() {
+    public void RemoveLock() {
         isLocked = false;
         padlock.GetComponent<Rigidbody>().isKinematic = false;
+
+        //done in exit
     }
 
     public void UnlockDesk() {
