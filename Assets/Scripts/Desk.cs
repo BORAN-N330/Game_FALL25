@@ -29,6 +29,7 @@ public class Desk : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         matchPairCurrent = matchPair;
+        Debug.Log("MathDeskPair: " + matchPairCurrent.ToString());
         matchPair += 1;
     }
 
@@ -46,10 +47,13 @@ public class Desk : MonoBehaviour
             GameObject canvas = GameObject.Find("Canvas");
             
             //add a new UI
-            GameObject tempPadlockUI = Instantiate(padlock);
+            GameObject tempPadlockUI = Instantiate(padlockUI);
+
             tempPadlockUI.GetComponent<PadlockUI>().code = code;
-            tempPadlockUI.GetComponent<PadlockUI>().matchPair = matchPair;
+            tempPadlockUI.GetComponent<PadlockUI>().matchPair = matchPairCurrent;
+
             tempPadlockUI.transform.SetParent(canvas.transform);
+            tempPadlockUI.GetComponent<RectTransform>().anchoredPosition = Vector2.zero; //center it
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

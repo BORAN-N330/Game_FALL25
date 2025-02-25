@@ -21,6 +21,7 @@ public class PadlockUI : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("MatchPair: " + matchPair.ToString());
         currentCode = new int[] {0,0,0};
         SetCurrentCodes();
     }
@@ -63,6 +64,10 @@ public class PadlockUI : MonoBehaviour
     }
 
     public void TryCombo() {
+
+        Debug.Log("Code: " + code);
+        Debug.Log("Current Code: " + currentCode);
+
         bool output = true;
 
         for (int i = 0; i < code.Length; i++) {

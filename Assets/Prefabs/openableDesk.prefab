@@ -428,7 +428,7 @@ MonoBehaviour:
   keyCardInDrawer: {fileID: 2286019109592388926, guid: 22a0c1c21fa13ef43b43ff4d647d3841, type: 3}
   spawnPoint: {fileID: 2368551621239912939}
   padlock: {fileID: 2462099734076827238}
-  padlockUI: {fileID: 0}
+  padlockUI: {fileID: 4374119183519257350, guid: 35bb33aa978a9e345a0a6230fdf4c953, type: 3}
   code: 000000000000000000000000
   isLocked: 1
   matchPairCurrent: 0
