@@ -7,6 +7,7 @@ public class Desk : MonoBehaviour
     public GameObject objectInDrawer;
     public GameObject spawnPoint;
     public bool isLocked;
+    bool isOpen;
 
     void Start()
     {
@@ -15,7 +16,8 @@ public class Desk : MonoBehaviour
     }
 
     public void ToggleDrawer() {
-        if (!isLocked) {
+        if (!isLocked && !isOpen) {
+            isOpen = true;
             animator.SetTrigger("openDrawer");
 
             //spawn in gameobject
