@@ -1,17 +1,22 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Desk : MonoBehaviour
 {
     Animator animator;
-    public GameObject objectInDrawer;
+
+    public string keyCardText = "";
+    public int keyCardCode = 0;
+    public GameObject keyCardInDrawer;
+
     public GameObject spawnPoint;
-    public bool isLocked;
+    public GameObject padlock;
+    public bool isLocked = true;
     bool isOpen;
 
     void Start()
     {
-        isLocked = false;
         animator = GetComponent<Animator>();
     }
 
@@ -21,10 +26,18 @@ public class Desk : MonoBehaviour
             animator.SetTrigger("openDrawer");
 
             //spawn in gameobject
-            if (objectInDrawer != null) {
+            if (keyCardInDrawer != null) {
                 StartCoroutine(Timer());
             }
+        } else {
+            //show LOCK UI
+            RemoveLock();
         }
+    }
+
+    private void RemoveLock() {
+        isLocked = false;
+        padlock.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     public void UnlockDesk() {
@@ -34,6 +47,8 @@ public class Desk : MonoBehaviour
     //delay
     IEnumerator Timer() {
         yield return new WaitForSeconds(1);
-        Instantiate(objectInDrawer, spawnPoint.transform.position, Quaternion.identity);
+        GameObject keycard = Instantiate(keyCardInDrawer, spawnPoint.transform.position, spawnPoint.transform.rotation);
+        keycard.GetComponent<KeyCard>().cardText = keyCardText;
+        keycard.GetComponent<KeyCard>().cardID = keyCardCode;
     }
 }
