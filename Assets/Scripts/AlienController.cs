@@ -20,8 +20,10 @@ public class AlienController : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        transform.LookAt(player, Vector3.up);
+        if (isActive) {
+            transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            transform.LookAt(player, Vector3.up);
+        }
     }
 
     //ontriggerenter
