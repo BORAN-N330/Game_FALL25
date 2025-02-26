@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9031778427584972913}
   - component: {fileID: 5126858437356012116}
   - component: {fileID: 2581774441199477927}
+  - component: {fileID: 915516177411894044}
   m_Layer: 0
   m_Name: prisonCell
   m_TagString: Untagged
@@ -70,6 +71,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &915516177411894044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170575276715250809}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2996264, y: 4.735101, z: 0.32617044}
+  m_Center: {x: -0.032550335, y: 1.8113964, z: 0.06808591}
 --- !u!1 &2064726590189622086
 GameObject:
   m_ObjectHideFlags: 0
