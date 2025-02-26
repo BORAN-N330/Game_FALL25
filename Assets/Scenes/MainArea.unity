@@ -1964,6 +1964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: teleportArea
       objectReference: {fileID: 0}
+    - target: {fileID: 8301548931246904783, guid: d268c8dc3170f66459f68819f40d4621, type: 3}
+      propertyPath: sceneName
+      value: PuzzleScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
