@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8301548931246904783, guid: d268c8dc3170f66459f68819f40d4621, type: 3}
       propertyPath: sceneName
-      value: PuzzleScene
+      value: EndScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2075,6 +2075,8 @@ MonoBehaviour:
   ids: 
   cards: []
   cardHolder: {fileID: 1515601173}
+  playersFlashlight: {fileID: 1697714879}
+  keepFlashlight: 1
 --- !u!4 &762499645
 Transform:
   m_ObjectHideFlags: 0
@@ -3803,6 +3805,11 @@ PrefabInstance:
 --- !u!4 &1697714878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3992195596281342586, guid: 3bc9b655d52b706459788069d44ecfa2, type: 3}
+  m_PrefabInstance: {fileID: 1697714877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1697714879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5628536234940651307, guid: 3bc9b655d52b706459788069d44ecfa2, type: 3}
   m_PrefabInstance: {fileID: 1697714877}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1732171397
