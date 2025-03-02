@@ -47,6 +47,11 @@ public class DoorOpener : MonoBehaviour
             if(isOpen == false) {
                 animator.SetTrigger("isOpen");
                 isOpen = true;
+
+            } else if (isOpen == true) {
+                //close the door
+                animator.SetTrigger("isClosed");
+                isOpen = false;
             }
         }
     }
