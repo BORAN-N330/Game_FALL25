@@ -11,9 +11,15 @@ public class GameManager : MonoBehaviour
     public GameObject cardHolder;
     GenerateCard generateCard;
 
+    [Header("Add Player's Flashlight (in orientation) Here")]
+    public GameObject playersFlashlight;
+
     void Start()
     {
         generateCard = cardHolder.GetComponent<GenerateCard>();
+
+        //make players flashlight invisible until collected
+        playersFlashlight.SetActive(false);
     }
 
     public void addKeyCard(int id, string text) {
@@ -35,5 +41,9 @@ public class GameManager : MonoBehaviour
         }
 
         return output;
+    }
+
+    public void SetFlashlightActive() {
+        playersFlashlight.SetActive(true);
     }
 }

@@ -24,15 +24,7 @@ public class KeyCard : MonoBehaviour
         textObj.text = cardText;
     }
 
-    //onCollision with player
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player")
-        {
-            PickupCard();
-        }
-    }
-
-    private void PickupCard() {
+    public void PickupCard() {
         //deativate collider
         this.GetComponent<BoxCollider>().enabled = false;
         //deativate mesh

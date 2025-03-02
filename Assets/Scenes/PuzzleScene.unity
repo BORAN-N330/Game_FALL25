@@ -492,6 +492,7 @@ MonoBehaviour:
   ids: 
   cards: []
   cardHolder: {fileID: 2100463151}
+  playersFlashlight: {fileID: 1053866387}
 --- !u!4 &63631914
 Transform:
   m_ObjectHideFlags: 0
@@ -4353,6 +4354,11 @@ PrefabInstance:
 --- !u!4 &1053866386 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3992195596281342586, guid: 3bc9b655d52b706459788069d44ecfa2, type: 3}
+  m_PrefabInstance: {fileID: 1053866385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1053866387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5628536234940651307, guid: 3bc9b655d52b706459788069d44ecfa2, type: 3}
   m_PrefabInstance: {fileID: 1053866385}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1078022544
