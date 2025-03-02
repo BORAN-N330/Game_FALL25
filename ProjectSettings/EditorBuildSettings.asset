@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChaseScene.unity
     guid: e71e7574cccde574aad91a315e5f6d0f
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 542a2e0f7b5914045a48ec0860a5d081
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
