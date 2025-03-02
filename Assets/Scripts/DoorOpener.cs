@@ -12,23 +12,39 @@ public class DoorOpener : MonoBehaviour
     //text on door
     TMP_Text text;
 
+    [Header("Door Properties")]
     public string doorText = "A";
     public int id = 0;
+    public bool requiresKey = true;
     
     bool isOpen = false;
 
     private void Start() {
-        animator = GetComponent<Animator>();
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         text = GetComponentInChildren<TMP_Text>();
-        text.text = doorText;
+        animator = GetComponent<Animator>();
+
+        if (requiresKey == true) {
+            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+            text.text = doorText;
+        } else {
+            text.text = "";
+        }
     }
 
     public void OpenDoor() {
         //check with gamemanager
-        if (gameManager.hasKeyCard(id)) {
-            if (isOpen == false) {
+        if (requiresKey) {
+            if (gameManager.hasKeyCard(id)) {
+                if (isOpen == false) {
+                    animator.SetTrigger("isOpen");
+                    isOpen = true;
+                }
+            }
+        } else {
+            //does not require key
+            if(isOpen == false) {
                 animator.SetTrigger("isOpen");
                 isOpen = true;
             }
