@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 9206182799400438945}
   - component: {fileID: 1471425446152470963}
   - component: {fileID: 6897852285663310153}
+  - component: {fileID: 7455076423739528856}
   m_Layer: 0
   m_Name: keyCard
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,6 +72,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.8941855, y: 3.3616257, z: 1.514225}
   m_Center: {x: 0.04786849, y: 0.052719593, z: -0.015655518}
+--- !u!114 &7455076423739528856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2286019109592388926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac30b9688f920ae4b8014bbd3a3af98b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1471425446152470963}
+        m_TargetAssemblyTypeName: KeyCard, Assembly-CSharp
+        m_MethodName: PickupCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4276390619196738602
 GameObject:
   m_ObjectHideFlags: 0
