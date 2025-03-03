@@ -2327,6 +2327,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f0957989f101434a91ae2a0a5e39b62, type: 3}
+--- !u!114 &614826059 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3057331210086576679, guid: 3272ed851dacf374a89e62bfb75ed947, type: 3}
+  m_PrefabInstance: {fileID: 898471285}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2566881d1063f4691e80dd8d8cf8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &629470701
 GameObject:
   m_ObjectHideFlags: 0
@@ -3634,6 +3645,22 @@ PrefabInstance:
     - target: {fileID: 6767745413974600616, guid: 3272ed851dacf374a89e62bfb75ed947, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8550539282045042556, guid: 3272ed851dacf374a89e62bfb75ed947, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8550539282045042556, guid: 3272ed851dacf374a89e62bfb75ed947, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 614826059}
+    - target: {fileID: 8550539282045042556, guid: 3272ed851dacf374a89e62bfb75ed947, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PickupFlashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 8550539282045042556, guid: 3272ed851dacf374a89e62bfb75ed947, type: 3}
+      propertyPath: onInteraction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FlashlightPickup, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
